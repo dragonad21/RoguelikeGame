@@ -68,6 +68,7 @@ Implementation Roguelike game in Java 21 with Lanterna UI
 ## 🏗 Архитектура
 
 Проект построен по **MVC** (Model-View-Controller) и разделён на слои:
+
 **core/** — Ядро приложения
 - config/ — Конфигурация (WorldConstants)
 - controller/ — Управление потоком (GameController)
