@@ -68,14 +68,25 @@ Implementation Roguelike game in Java 21 with Lanterna UI
 ## 🏗 Архитектура
 
 Проект построен по **MVC** (Model-View-Controller) и разделён на слои:
-core/
+## core/ ← Ядро приложения
+├── config/ ← Конфигурация (WorldConstants)
 ├── controller/ ← Управление потоком (GameController)
-├── domain/ ← Бизнес-логика (Game, Player, Enemy, Item, etc.)
-├── datalayer/ ← Сохранение и загрузка (DTO + сериализация)
+├── domain/ ← Бизнес-логика
+│   ├── inventory/ ← Предметы и инвентарь
+│   ├── levels/ ← Генерация уровней
+│   ├── space/ ← Карта, комнаты, коридоры
+│   └── units/ ← Игрок и враги
+└── util/ ← Вспомогательные классы (Rng)
 
-presentation/
-└── view/ ← Отображение (GameView, MainMenuView, PackView, etc.)
-└── renderers/ ← Рендереры для карты, врагов, предметов
+## datalayer/ ← Сохранение и загрузка
+├── data/ ← JSON-файлы (save.json, scoreboard.json)
+├── dto/ ← DTO для сериализации
+└── serialization/ ← Сервисы (SaveService, JsonService)
+
+## presentation/ ← Отображение
+├── config/ ← Цвета (ColorConstants)
+└── view/ ← Вьюхи
+    └── renderers/ ← Рендереры объектов
 
 ## 🛠 Технологии
 
