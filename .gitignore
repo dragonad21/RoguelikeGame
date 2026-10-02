@@ -1,14 +1,25 @@
 # IDEA
 .idea/
 *.iml
+*.ipr
+*.iws
+out/
+
+# Giga IDE
+.gigaide/
 
 # Gradle
 .gradle/
 build/
-gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
 
 # Game data
 datalayer/data/*.json
 
 # OS
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
